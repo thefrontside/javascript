@@ -1,0 +1,11 @@
+{
+  "name": "@frontside/eslint-config",
+  "version": "1.0.0",
+  "description": "Shared eslint config @thefrontside",
+  "main": "index.js",
+  "repository": "https://github.com/thefrontside/eslint-config",
+  "author": "Frontside Engineering <engineering@frontside.io>",
+  "license": "MIT",
+  "private": false,
+  "keywords": ["eslint", "eslintconfig"]
+}
