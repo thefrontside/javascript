@@ -1,0 +1,11 @@
+{
+  "name": "@frontside/tsconfig",
+  "version": "0.0.1",
+  "description": "Frontside Typescript Config",
+  "repository": "https://github.com/frontside/tsconfig.git",
+  "author": "Frontside Engineering <engineering@frontside.io>",
+  "main": "tsconfig.json",
+  "files": [
+    "tsconfig.json"
+  ]
+}
