@@ -12,6 +12,7 @@
     ]
   },
   "scripts": {
-    "clean": "git clean -dxf"
+    "clean": "git clean -dxf",
+    "test": "yarn workspaces run test"
   }
 }
