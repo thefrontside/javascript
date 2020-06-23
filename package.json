@@ -1,0 +1,17 @@
+{
+  "name": "javascript-monorepo",
+  "version": "0.0.0-monorepo",
+  "description": "Monorepo of JavaScript configuration packages",
+  "repository": "git@github.com:thefrontside/javascript.git",
+  "author": "Frontside Engineering <engineering@frontside.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "clean": "git clean -dxf"
+  }
+}
