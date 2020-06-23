@@ -1,3 +1,5 @@
+name: Preview
+
 on:
   pull_request:
     branches:
@@ -10,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Publish PR Preview
-      uses: thefrontside/actions/publish-pr-preview@v1.2
+      uses: thefrontside/actions/publish-pr-preview@v1.4
       with:
         npm_publish: yarn publish
       env:

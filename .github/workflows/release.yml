@@ -1,3 +1,5 @@
+name: Release
+
 on:
   push:
     branches:
@@ -10,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Publish Releases
-      uses: thefrontside/actions/synchronize-with-npm@v1.3
+      uses: thefrontside/actions/synchronize-with-npm@v1.6
       with:
         npm_publish: yarn publish
       env:
