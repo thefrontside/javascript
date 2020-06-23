@@ -13,8 +13,5 @@
   },
   "scripts": {
     "clean": "git clean -dxf"
-  },
-  "devDependencies": {
-    "lerna": "^3.16.4"
   }
 }
