@@ -1,7 +1,7 @@
 {
   "name": "javascript-monorepo",
   "version": "0.0.0-monorepo",
-  "description": "Collection of Frontside's JavaScript configuration packages",
+  "description": "Frontside JavaScript tooling",
   "repository": "git@github.com:thefrontside/javascript.git",
   "author": "Frontside Engineering <engineering@frontside.com>",
   "license": "MIT",

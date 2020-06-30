@@ -1,6 +1,12 @@
 module.exports = {
-  "extends": "plugin:@typescript-eslint/recommended",
-  "plugins": ["prefer-let"],
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    "prefer-let",
+    "@typescript-eslint"
+  ],
   "rules": {
     "prefer-const": "off",
     "prefer-let/prefer-let": "error",
