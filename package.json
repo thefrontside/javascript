@@ -1,7 +1,7 @@
 {
   "name": "javascript-monorepo",
   "version": "0.0.0-monorepo",
-  "description": "Monorepo of JavaScript configuration packages",
+  "description": "Frontside JavaScript tooling",
   "repository": "git@github.com:thefrontside/javascript.git",
   "author": "Frontside Engineering <engineering@frontside.com>",
   "license": "MIT",
@@ -12,6 +12,7 @@
     ]
   },
   "scripts": {
-    "clean": "git clean -dxf"
+    "clean": "git clean -dxf",
+    "test": "yarn workspaces run test"
   }
 }
