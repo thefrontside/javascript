@@ -13,7 +13,7 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^3.5.0",
     "@typescript-eslint/parser": "^3.5.0",
-    "eslint-plugin-prefer-let": "^1.0.0"
+    "eslint-plugin-prefer-let": "^1.0.1"
   },
   "peerDependencies": {
     "eslint": ">=3"
