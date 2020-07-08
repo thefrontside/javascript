@@ -1,5 +1,5 @@
 {
-  "name": "@frontside/eslint-plugin-prefer-let",
+  "name": "eslint-plugin-prefer-let",
   "version": "1.0.0",
   "description": "Rule to prefer using `let` to bind names to values",
   "keywords": [
