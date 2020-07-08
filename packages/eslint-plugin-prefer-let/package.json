@@ -1,6 +1,7 @@
 {
   "name": "eslint-plugin-prefer-let",
   "version": "1.0.0",
+  "private": true,
   "description": "Rule to prefer using `let` to bind names to values",
   "keywords": [
     "eslint",
