@@ -6,6 +6,7 @@
   "dependencies": {
     "@frontside/eslint-config": "1.1.1",
     "@frontside/tsconfig": "1.0.0",
+    "eslint": "7.4.0",
     "typescript": "3.9.6"
   }
 }
