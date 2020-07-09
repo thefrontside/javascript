@@ -1,7 +1,7 @@
 {
   "name": "@frontside/typescript",
   "version": "1.0.0",
-  "description": "Frontside Typescript",
+  "description": "TypeScript Development Tools at Frontside",
   "author": "Frontside Engineering <engineering@frontside.com>",
   "dependencies": {
     "@frontside/eslint-config": "1.1.1",
