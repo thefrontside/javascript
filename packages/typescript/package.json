@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "TypeScript Development Tools at Frontside",
   "author": "Frontside Engineering <engineering@frontside.com>",
-  "main": ".eslintrc.js",
   "dependencies": {
     "@frontside/eslint-config": "1.1.1",
     "@frontside/tsconfig": "1.0.0",
