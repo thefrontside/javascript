@@ -4,7 +4,7 @@
   "description": "TypeScript Development Tools at Frontside",
   "author": "Frontside Engineering <engineering@frontside.com>",
   "dependencies": {
-    "@frontside/eslint-config": "1.1.1",
+    "@frontside/eslint-config": "1.1.1-d499beb",
     "@frontside/tsconfig": "1.0.0",
     "eslint": "7.4.0",
     "typescript": "3.9.6"
