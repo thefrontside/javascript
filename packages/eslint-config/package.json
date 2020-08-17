@@ -1,6 +1,6 @@
 {
   "name": "@frontside/eslint-config",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Shared eslint config @thefrontside",
   "main": "index.js",
   "author": "Frontside Engineering <engineering@frontside.com>",
@@ -14,8 +14,5 @@
     "@typescript-eslint/eslint-plugin": "^3.5.0",
     "@typescript-eslint/parser": "^3.5.0",
     "eslint-plugin-prefer-let": "^1.0.2"
-  },
-  "peerDependencies": {
-    "eslint": ">=3"
   }
 }
