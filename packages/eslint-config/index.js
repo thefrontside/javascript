@@ -4,6 +4,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended"
   ],
   "plugins": [
+    "mocha-no-only",
     "prefer-let",
     "@typescript-eslint"
   ],
@@ -14,6 +15,7 @@ module.exports = {
     "@typescript-eslint/no-use-before-define": "off",
     "arrow-spacing": "error",
     "eol-last": "error",
+    "mocha-no-only/mocha-no-only": ["error"],
     "no-empty-function": "off",
     "no-multi-spaces": "error",
     "no-trailing-spaces": "error",
