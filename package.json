@@ -14,5 +14,8 @@
   "scripts": {
     "clean": "git clean -dxf",
     "test": "yarn workspaces run test"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.8.0"
   }
 }
