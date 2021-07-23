@@ -1,5 +1,5 @@
 ---
-"@frontside/eslint-config": major
+"@frontside/eslint-config": minor
 ---
 
 Upgrade typescript, eslint, and plugins
