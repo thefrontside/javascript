@@ -16,6 +16,6 @@
     "test": "yarn workspaces run test"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.8.0"
+    "@changesets/cli": "^2.17.0"
   }
 }

@@ -5,7 +5,6 @@
   "author": "Frontside Engineering <engineering@frontside.com>",
   "dependencies": {
     "@frontside/tsconfig": "1.2.0",
-    "eslint": "7.17.0",
     "typescript": "^4.1.3"
   },
   "peerDependencies": {
