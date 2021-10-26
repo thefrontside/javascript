@@ -1,6 +1,6 @@
 {
   "name": "@frontside/tsconfig",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Frontside Typescript Config",
   "author": "Frontside Engineering <engineering@frontside.com>",
   "main": "tsconfig.json",
