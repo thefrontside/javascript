@@ -4,7 +4,7 @@
   "description": "TypeScript Development Tools at Frontside",
   "author": "Frontside Engineering <engineering@frontside.com>",
   "dependencies": {
-    "@frontside/tsconfig": "1.2.0",
+    "@frontside/tsconfig": "^3.0.0",
     "typescript": "^4.1.3"
   },
   "peerDependencies": {
