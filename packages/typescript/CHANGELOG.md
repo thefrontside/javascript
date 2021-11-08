@@ -1,5 +1,13 @@
 # @frontside/typescript
 
+## 3.0.1
+
+### Patch Changes
+
+- 9bf1e83: update deps from monorepo
+- Updated dependencies [9bf1e83]
+  - @frontside/eslint-config@3.0.1
+
 ## 3.0.0
 
 ### Major Changes

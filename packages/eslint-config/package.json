@@ -1,6 +1,6 @@
 {
   "name": "@frontside/eslint-config",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Shared eslint config @thefrontside",
   "main": "index.js",
   "author": "Frontside Engineering <engineering@frontside.com>",
