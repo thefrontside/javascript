@@ -8,13 +8,16 @@ on:
 jobs:
   publish-previews:
     name: Publish Preview Packages
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
-    - uses: actions/checkout@v1
-    - name: Publish PR Preview
-      uses: thefrontside/actions/publish-pr-preview@v1.4
+    - uses: actions/checkout@v2
       with:
-        npm_publish: yarn publish
+        fetch-depth: 0
+    - uses: actions/setup-node@v2
+      with:
+        registry-url: https://registry.npmjs.org
+    - name: Publish PR Preview
+      uses: thefrontside/actions/publish-pr-preview@main
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        NPM_TOKEN: ${{ secrets.FRONTSIDEJACK_NPM_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.FRONTSIDEJACK_GITHUB_TOKEN }}
+        NODE_AUTH_TOKEN: ${{ secrets.FRONTSIDEJACK_NPM_TOKEN }}
