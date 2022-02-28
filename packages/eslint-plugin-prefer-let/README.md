@@ -8,7 +8,7 @@ long-standing conventions set forth by both formal symbolic logic and
 the practice of functional programming.
 
 Usage of the `const` keyword to bind an _intermediate_ value of a
-computation places emphasis on the compiler and and its role in
+computation places emphasis on the compiler and its role in
 ensuring that a _reference_ never changes. By contrast using `let` in
 the same situation reads, in plain English, the programmer's intent to
 declare a name value binding.
