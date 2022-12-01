@@ -11,12 +11,12 @@
     "eslintconfig"
   ],
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "5.2.0",
-    "@typescript-eslint/experimental-utils": "5.2.0",
-    "@typescript-eslint/parser": "5.2.0",
-    "eslint": "8.1.0",
+    "@typescript-eslint/eslint-plugin": "5.45.0",
+    "@typescript-eslint/experimental-utils": "5.45.0",
+    "@typescript-eslint/parser": "5.45.0",
+    "eslint": "8.28.0",
     "eslint-plugin-mocha-no-only": "^1.1.1",
-    "eslint-plugin-prefer-let": "^3.0.0"
+    "eslint-plugin-prefer-let": "^3.0.1"
   },
   "scripts": {
     "test": "echo No test for @frontside/eslint-config"

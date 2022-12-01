@@ -26,4 +26,4 @@ module.exports = {
     "prefer-let/prefer-let": "error",
     semi: ["error", "always", { omitLastInOneLineBlock: true }],
   }
-}
+};
