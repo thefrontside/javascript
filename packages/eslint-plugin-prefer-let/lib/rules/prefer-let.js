@@ -55,7 +55,7 @@ module.exports = {
             message: 'prefer `let` over `var` to declare value bindings',
             node
           });
-        } else if (node.kind !== 'let' && !isTopLevelScope(node)) {
+        } else if (node.kind === 'const' && !isTopLevelScope(node)) {
           let constToken = sourceCode.getFirstToken(node);
 
           context.report({
