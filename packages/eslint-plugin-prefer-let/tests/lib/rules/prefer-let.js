@@ -45,7 +45,10 @@ ruleTester.run("prefer-let", rule, {
         node: true
       },
       code: "const PI = 3.14;"
-    }
+    },
+    // Not sure how to test these.
+    // { code: "await using disposables = new AsyncDisposableStack()" },
+    // { code: "using disposables = new DisposableStack()" },
   ],
 
   invalid: [
@@ -99,6 +102,6 @@ ruleTester.run("prefer-let", rule, {
         message: "`const` declaration outside top-level scope",
         type: "VariableDeclaration"
       }]
-    }
+    },
   ]
 });
