@@ -16,6 +16,7 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         registry-url: https://registry.npmjs.org
+    - uses: volta-cli/action@v4
     - name: Publish PR Preview
       uses: thefrontside/actions/publish-pr-preview@dl/update-node-yarn
       env:
