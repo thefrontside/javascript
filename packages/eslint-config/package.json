@@ -5,18 +5,17 @@
   "main": "index.js",
   "author": "Frontside Engineering <engineering@frontside.com>",
   "license": "MIT",
-  "private": false,
   "keywords": [
     "eslint",
     "eslintconfig"
   ],
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "5.2.0",
-    "@typescript-eslint/experimental-utils": "5.2.0",
-    "@typescript-eslint/parser": "5.2.0",
-    "eslint": "8.1.0",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "@typescript-eslint/parser": "^7.7.1",
+    "@typescript-eslint/utils": "^7.7.1",
+    "eslint": "8.56.0",
     "eslint-plugin-mocha-no-only": "^1.1.1",
-    "eslint-plugin-prefer-let": "^3.0.0"
+    "eslint-plugin-prefer-let": "^3.0.1"
   },
   "scripts": {
     "test": "echo No test for @frontside/eslint-config"
