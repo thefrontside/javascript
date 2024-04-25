@@ -13,7 +13,7 @@
   },
   "scripts": {
     "clean": "git clean -dxf",
-    "test": "yarn workspaces run test"
+    "test": "yarn workspaces foreach --all run test"
   },
   "devDependencies": {
     "@changesets/cli": "^2.17.0"
