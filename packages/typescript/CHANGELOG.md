@@ -1,5 +1,12 @@
 # @frontside/typescript
 
+## 5.0.0
+
+### Patch Changes
+
+- Updated dependencies [0ce39d0]
+  - @frontside/eslint-config@4.0.0
+
 ## 4.0.0
 
 ### Patch Changes

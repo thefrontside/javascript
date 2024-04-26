@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.0.0
+
+### Major Changes
+
+- 0ce39d0: Update eslint and typescript-eslint
+
 ## 3.1.0
 
 ### Minor Changes
