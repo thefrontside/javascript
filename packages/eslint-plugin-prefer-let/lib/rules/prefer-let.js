@@ -28,16 +28,23 @@ module.exports = {
     // Helpers
     //----------------------------------------------------------------------
 
+    function getScope(node) {
+      let sourceCode = context.sourceCode ?? context.getSourceCode();
+      return sourceCode.getScope
+        ? sourceCode.getScope(node)
+        : context.getScope();
+    }
+
     function isGlobalScope(node) {
-      return context.getScope().type === 'global';
+      return getScope(node).type === 'global';
     }
 
     function isModuleScope(node) {
-      return context.getScope().type === 'module';
+      return getScope(node).type === 'module';
     }
 
     function isProgramScope(node) {
-      return context.getScope().block.type === 'Program';
+      return getScope(node).block.type === 'Program';
     }
 
     function isTopLevelScope(node) {

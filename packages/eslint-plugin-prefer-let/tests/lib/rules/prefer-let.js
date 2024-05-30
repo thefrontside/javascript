@@ -11,9 +11,10 @@
 var rule = require("../../../lib/rules/prefer-let");
 
 var RuleTester = require("eslint").RuleTester;
+var globals = require('globals')
 
 RuleTester.setDefaultConfig({
-  parserOptions: {
+  languageOptions: {
     ecmaVersion: 6,
     sourceType: "module"
   }
@@ -38,11 +39,11 @@ ruleTester.run("prefer-let", rule, {
       code: `export const AlsoObject = Object;`
     },
     {
-      parserOptions: {
-        sourceType: "script"
-      },
-      env: {
-        node: true
+      languageOptions: {
+        sourceType: "script",
+        globals: {
+          ...globals.node
+        }
       },
       code: "const PI = 3.14;"
     }
@@ -87,11 +88,11 @@ ruleTester.run("prefer-let", rule, {
       }]
     },
     {
-      parserOptions: {
-        sourceType: "script"
-      },
-      env: {
-        node: true
+      languageOptions: {
+        sourceType: "script",
+        globals: {
+          ...globals.node
+        }
       },
       code: "function y() { const x = 'y'; return x; }",
       output: "function y() { let x = 'y'; return x; }",
