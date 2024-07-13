@@ -1,0 +1,41 @@
+{
+  "gitSiteUrl": "https://github.com/thefrontside/javascript/",
+  "pkgManagers": {
+    "javascript": {
+      "version": true,
+      "getPublishedVersion": {
+        "use": "fetch:check",
+        "options": {
+          "url": "https://registry.npmjs.com/${ pkg.pkg }/${ pkg.pkgFile.version }"
+        }
+      },
+      "publish": [
+        "npm publish --provenance --access public"
+      ]
+    }
+  },
+  "packages": {
+    "@frontside/eslint-config": {
+      "path": "./packages/eslint-config",
+      "manager": "javascript",
+      "dependencies": [
+        "eslint-plugin-prefer-let"
+      ]
+    },
+    "eslint-plugin-prefer-let": {
+      "path": "./packages/eslint-plugin-prefer-let",
+      "manager": "javascript"
+    },
+    "@frontside/tsconfig": {
+      "path": "./packages/tsconfig",
+      "manager": "javascript"
+    },
+    "@frontside/typescript": {
+      "path": "./packages/typescript",
+      "manager": "javascript",
+      "dependencies": [
+        "@frontside/tsconfig"
+      ]
+    }
+  }
+}
