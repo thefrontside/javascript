@@ -1,5 +1,9 @@
 # eslint-plugin-prefer-let
 
+## \[4.0.0]
+
+- [`e597fa9`](https://github.com/thefrontside/javascript/commit/e597fa93ce94f81d08d259895003a489ccc0021e) Support ESLint v9
+
 ## 3.0.1
 
 ### Patch Changes

@@ -1117,7 +1117,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-prefer-let@npm:^3.0.1, eslint-plugin-prefer-let@workspace:packages/eslint-plugin-prefer-let":
+"eslint-plugin-prefer-let@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "eslint-plugin-prefer-let@npm:3.0.1"
+  dependencies:
+    requireindex: "npm:~1.2.0"
+  checksum: 10c0/42ec400d0f40edb8917816a3bfb664977c4642ce9decc31f1abe6e4b3761d92acba0a7e052a9354f43fcaa446004021ff9baac48d457826d27fddb539d53be2f
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-prefer-let@workspace:packages/eslint-plugin-prefer-let":
   version: 0.0.0-use.local
   resolution: "eslint-plugin-prefer-let@workspace:packages/eslint-plugin-prefer-let"
   dependencies:
