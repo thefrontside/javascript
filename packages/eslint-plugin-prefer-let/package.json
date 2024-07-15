@@ -2,6 +2,11 @@
   "name": "eslint-plugin-prefer-let",
   "version": "4.0.0",
   "description": "Rule to prefer using `let` to bind names to values",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thefrontside/javascript.git",
+    "directory": "packages/eslint-plugin-prefer-let"
+  },
   "keywords": [
     "eslint",
     "eslintplugin",
@@ -22,6 +27,5 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "license": "ISC",
-  "repository": "thefrontside/javascript"
+  "license": "ISC"
 }

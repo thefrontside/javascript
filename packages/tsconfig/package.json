@@ -4,6 +4,11 @@
   "description": "Frontside Typescript Config",
   "author": "Frontside Engineering <engineering@frontside.com>",
   "main": "tsconfig.json",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thefrontside/javascript.git",
+    "directory": "packages/tsconfig"
+  },
   "files": [
     "tsconfig.json"
   ],

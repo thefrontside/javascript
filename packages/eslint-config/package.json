@@ -5,6 +5,11 @@
   "main": "index.js",
   "author": "Frontside Engineering <engineering@frontside.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thefrontside/javascript.git",
+    "directory": "packages/eslint-config"
+  },
   "keywords": [
     "eslint",
     "eslintconfig"
