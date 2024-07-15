@@ -46,7 +46,7 @@ jobs:
           recognizeContributors: true
       - name: sync lockfile
         if: steps.covector.outputs.commandRan == 'version'
-        run: yarn install
+        run: yarn install --refresh-lockfile  --mode=update-lockfile
       - name: Create Pull Request With Versions Bumped
         id: cpr
         uses: peter-evans/create-pull-request@v6
