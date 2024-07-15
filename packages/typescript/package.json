@@ -3,6 +3,11 @@
   "version": "5.0.0",
   "description": "TypeScript Development Tools at Frontside",
   "author": "Frontside Engineering <engineering@frontside.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thefrontside/javascript.git",
+    "directory": "packages/typescript"
+  },
   "dependencies": {
     "@frontside/tsconfig": "^3.0.0",
     "typescript": "^4.1.3"
