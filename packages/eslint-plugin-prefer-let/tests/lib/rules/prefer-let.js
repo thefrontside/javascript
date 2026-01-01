@@ -46,6 +46,24 @@ ruleTester.run("prefer-let", rule, {
         }
       },
       code: "const PI = 3.14;"
+    },
+    {
+      code: "declare global { var foo: any; }",
+      languageOptions: {
+        parser: require("@typescript-eslint/parser")
+      }
+    },
+    {
+      code: "declare module 'foo' { var bar: any; }",
+      languageOptions: {
+        parser: require("@typescript-eslint/parser")
+      }
+    },
+    {
+      code: "declare namespace MyNamespace { var baz: any; }",
+      languageOptions: {
+        parser: require("@typescript-eslint/parser")
+      }
     }
   ],
 

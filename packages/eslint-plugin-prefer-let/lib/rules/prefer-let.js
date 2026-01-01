@@ -51,6 +51,17 @@ module.exports = {
       return isGlobalScope(node) || isModuleScope(node) || isProgramScope(node);
     }
 
+    function isInAmbientContext(node) {
+      let current = node.parent;
+      while (current) {
+        if (current.type === 'TSModuleDeclaration' && current.declare === true) {
+          return true;
+        }
+        current = current.parent;
+      }
+      return false;
+    }
+
     //----------------------------------------------------------------------
     // Public
     //----------------------------------------------------------------------
@@ -58,6 +69,9 @@ module.exports = {
     return {
       VariableDeclaration(node) {
         if (node.kind === 'var') {
+          if (isInAmbientContext(node)) {
+            return;
+          }
           context.report({
             message: 'prefer `let` over `var` to declare value bindings',
             node
