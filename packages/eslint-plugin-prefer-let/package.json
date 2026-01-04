@@ -20,6 +20,7 @@
     "requireindex": "~1.2.0"
   },
   "devDependencies": {
+    "@typescript-eslint/parser": "^8.0.0",
     "eslint": "^9.3.0",
     "globals": "^15.3.0",
     "mocha": "^9.1.3"
