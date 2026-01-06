@@ -118,6 +118,6 @@ ruleTester.run("prefer-let", rule, {
         message: "`const` declaration outside top-level scope",
         type: "VariableDeclaration"
       }]
-    }
+    },
   ]
 });
