@@ -26,9 +26,9 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # required for use of git history
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v6
         with:
-          registry-url: "https://registry.npmjs.org"
+          node-version: 24
       - uses: volta-cli/action@v4
       - name: git config
         run: |
@@ -37,8 +37,6 @@ jobs:
       - name: covector version or publish (publish when no change files present)
         uses: jbolda/covector/packages/action@covector-v0
         id: covector
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           command: "version-or-publish"
