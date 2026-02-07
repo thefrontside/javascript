@@ -22,7 +22,7 @@ module.exports = {
   },
 
   create: function(context) {
-    let sourceCode = context.getSourceCode();
+    let sourceCode = context.sourceCode ?? context.getSourceCode();
 
     //----------------------------------------------------------------------
     // Helpers
