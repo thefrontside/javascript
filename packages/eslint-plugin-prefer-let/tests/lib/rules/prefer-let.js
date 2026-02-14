@@ -72,37 +72,32 @@ ruleTester.run("prefer-let", rule, {
       code: "function y() { const x = 'y'; return x; }",
       output: "function y() { let x = 'y'; return x; }",
       errors: [{
-        message: "`const` declaration outside top-level scope",
-        type: "VariableDeclaration"
+        message: "`const` declaration outside top-level scope"
       }]
     },
     {
       code: "function y() { const {x, y} = {x: 'x', y: 'y'}}",
       output: "function y() { let {x, y} = {x: 'x', y: 'y'}}",
       errors: [{
-        message: "`const` declaration outside top-level scope",
-        type: "VariableDeclaration"
+        message: "`const` declaration outside top-level scope"
       }]
     },
     {
       code: "var x = 'y';",
       errors: [{
-        message: "prefer `let` over `var` to declare value bindings",
-        type: "VariableDeclaration"
+        message: "prefer `let` over `var` to declare value bindings"
       }]
     },
     {
       code: "function y() { var x = 'y'};",
       errors: [{
-        message: "prefer `let` over `var` to declare value bindings",
-        type: "VariableDeclaration"
+        message: "prefer `let` over `var` to declare value bindings"
       }]
     },
     {
       code: "function y() { var { x, y } = {}; }",
       errors: [{
-        message: "prefer `let` over `var` to declare value bindings",
-        type: "VariableDeclaration"
+        message: "prefer `let` over `var` to declare value bindings"
       }]
     },
     {
@@ -115,8 +110,7 @@ ruleTester.run("prefer-let", rule, {
       code: "function y() { const x = 'y'; return x; }",
       output: "function y() { let x = 'y'; return x; }",
       errors: [{
-        message: "`const` declaration outside top-level scope",
-        type: "VariableDeclaration"
+        message: "`const` declaration outside top-level scope"
       }]
     },
   ]
