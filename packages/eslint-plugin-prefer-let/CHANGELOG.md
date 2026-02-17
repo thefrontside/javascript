@@ -1,5 +1,9 @@
 # eslint-plugin-prefer-let
 
+## \[4.1.0]
+
+- [`6a5ba09`](https://github.com/thefrontside/javascript/commit/6a5ba096b531357d4c9ddd41fe158623cbebf601) Support ESLint v10
+
 ## \[4.0.1]
 
 - [`ee2ef1b`](https://github.com/thefrontside/javascript/commit/ee2ef1be18087421c2870eb2845b3235e1e10d58) allow var in TypeScript ambient declarations
