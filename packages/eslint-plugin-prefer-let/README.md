@@ -82,6 +82,38 @@ Then configure the rules you want to use under the rules section.
 }
 ```
 
+### Options
+
+#### `forceUpperCaseConst`
+
+When set to `true`, this option enforces `const` for top-level `UPPER_CASE` names (e.g. `PI`, `API_BASE_URL`)
+
+```json
+{
+    "rules": {
+        "prefer-let/prefer-let": [2, { "forceUpperCaseConst": true }]
+    }
+}
+```
+
+This makes the distinction between true constants and regular bindings explicit and machine-enforced.
+
+Good:
+
+```javascript
+const PI = 3.14;
+const API_BASE_URL = 'https://example.com';
+
+let config = loadConfig();
+```
+
+Bad:
+
+```javascript
+const config = loadConfig();  // not UPPER_CASE — use let
+let PI = 3.14;                // UPPER_CASE — use const
+```
+
 ### Possible Conflicts
 
 This plugin may conflict with other plugins or configs that set `eslint prefer-const`. You can configure the rules to avoid this:
