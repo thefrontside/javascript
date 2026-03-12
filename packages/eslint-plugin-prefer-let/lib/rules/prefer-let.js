@@ -17,12 +17,22 @@ module.exports = {
     },
     fixable: "code",  // or "code" or "whitespace"
     schema: [
-      // fill in your schema
+      {
+        type: "object",
+        properties: {
+          forceUpperCaseConst: {
+            type: "boolean"
+          }
+        },
+        additionalProperties: false
+      }
     ]
   },
 
   create: function(context) {
     let sourceCode = context.sourceCode ?? context.getSourceCode();
+    let options = context.options[0] || {};
+    let forceUpperCaseConst = options.forceUpperCaseConst || false;
 
     //----------------------------------------------------------------------
     // Helpers
@@ -51,6 +61,40 @@ module.exports = {
       return isGlobalScope(node) || isModuleScope(node) || isProgramScope(node);
     }
 
+    function isUpperCase(name) {
+      return /^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$/.test(name);
+    }
+
+    function getBindingNames(node) {
+      if (node.type === 'Identifier') {
+        return [node.name];
+      }
+      if (node.type === 'ObjectPattern') {
+        return node.properties.flatMap(function(prop) {
+          return getBindingNames(prop.value || prop.argument);
+        });
+      }
+      if (node.type === 'ArrayPattern') {
+        return node.elements.filter(Boolean).flatMap(function(el) {
+          return getBindingNames(el);
+        });
+      }
+      if (node.type === 'RestElement') {
+        return getBindingNames(node.argument);
+      }
+      if (node.type === 'AssignmentPattern') {
+        return getBindingNames(node.left);
+      }
+      return [];
+    }
+
+    function allDeclaratorsUpperCase(node) {
+      return node.declarations.every(function(decl) {
+        let names = getBindingNames(decl.id);
+        return names.length > 0 && names.every(isUpperCase);
+      });
+    }
+
     function isInAmbientContext(node) {
       let current = node.parent;
       while (current) {
@@ -76,14 +120,35 @@ module.exports = {
             message: 'prefer `let` over `var` to declare value bindings',
             node
           });
-        } else if (node.kind === 'const' && !isTopLevelScope(node)) {
-          let constToken = sourceCode.getFirstToken(node);
-
+        } else if (node.kind === 'const') {
+          if (isTopLevelScope(node)) {
+            if (forceUpperCaseConst && !allDeclaratorsUpperCase(node)) {
+              let constToken = sourceCode.getFirstToken(node);
+              context.report({
+                message: '`const` declaration for non-constant names at top-level scope. Use `let` or rename to UPPER_CASE',
+                node,
+                fix: function(fixer) {
+                  return fixer.replaceText(constToken, 'let');
+                }
+              });
+            }
+          } else {
+            let constToken = sourceCode.getFirstToken(node);
+            context.report({
+              message: '`const` declaration outside top-level scope',
+              node,
+              fix: function(fixer) {
+                return fixer.replaceText(constToken, 'let');
+              }
+            });
+          }
+        } else if (node.kind === 'let' && forceUpperCaseConst && isTopLevelScope(node) && allDeclaratorsUpperCase(node)) {
+          let letToken = sourceCode.getFirstToken(node);
           context.report({
-            message: '`const` declaration outside top-level scope',
+            message: 'use `const` for constant names (UPPER_CASE) at top-level scope',
             node,
             fix: function(fixer) {
-              return fixer.replaceText(constToken, 'let');
+              return fixer.replaceText(letToken, 'const');
             }
           });
         }
