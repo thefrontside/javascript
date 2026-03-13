@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-prefer-let",
-  "version": "4.1.0",
+  "version": "4.2.0",
   "description": "Rule to prefer using `let` to bind names to values",
   "repository": {
     "type": "git",
