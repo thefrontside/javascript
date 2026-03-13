@@ -1,5 +1,9 @@
 # eslint-plugin-prefer-let
 
+## \[4.2.0]
+
+- [`9066434`](https://github.com/thefrontside/javascript/commit/90664342144bce7d4a13812e82c155ba3d4ea7e0) Add `forceUpperCaseConst` option
+
 ## \[4.1.0]
 
 - [`6a5ba09`](https://github.com/thefrontside/javascript/commit/6a5ba096b531357d4c9ddd41fe158623cbebf601) Support ESLint v10
