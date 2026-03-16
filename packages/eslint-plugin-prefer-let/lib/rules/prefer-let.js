@@ -132,6 +132,8 @@ module.exports = {
                 }
               });
             }
+          } else if (node.parent && node.parent.type === 'ExportNamedDeclaration') {
+            // ignore `export const` cases
           } else {
             let constToken = sourceCode.getFirstToken(node);
             context.report({
