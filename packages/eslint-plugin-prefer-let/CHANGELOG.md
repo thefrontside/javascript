@@ -1,5 +1,9 @@
 # eslint-plugin-prefer-let
 
+## \[4.2.1]
+
+- [`fadad0b`](https://github.com/thefrontside/javascript/commit/fadad0b5cf786b3186d74a35d9933b5e8bea0e34) Ignore `export const` cases
+
 ## \[4.2.0]
 
 - [`9066434`](https://github.com/thefrontside/javascript/commit/90664342144bce7d4a13812e82c155ba3d4ea7e0) Add `forceUpperCaseConst` option
