@@ -122,7 +122,7 @@ module.exports = {
           });
         } else if (node.kind === 'const') {
           if (isTopLevelScope(node)) {
-            if (forceUpperCaseConst && !allDeclaratorsUpperCase(node)) {
+            if (forceUpperCaseConst && !allDeclaratorsUpperCase(node) && !(node.parent && node.parent.type === 'ExportNamedDeclaration')) {
               let constToken = sourceCode.getFirstToken(node);
               context.report({
                 message: '`const` declaration for non-constant names at top-level scope. Use `let` or rename to UPPER_CASE',

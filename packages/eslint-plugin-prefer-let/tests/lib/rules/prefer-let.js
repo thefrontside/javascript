@@ -82,6 +82,11 @@ ruleTester.run("prefer-let", rule, {
       code: "export const FOO_BAR = 'baz';",
       options: [{ forceUpperCaseConst: true }]
     },
+    // forceUpperCaseConst: export const with non-upper-case name does not create an issue
+    {
+      code: "export const foo = 'bar';",
+      options: [{ forceUpperCaseConst: true }]
+    },
     // forceUpperCaseConst: let with non-upper-case at top level is valid
     {
       code: "let fooBar = 'baz';",
@@ -149,14 +154,6 @@ ruleTester.run("prefer-let", rule, {
     {
       code: "const { foo, bar } = {};",
       output: "let { foo, bar } = {};",
-      options: [{ forceUpperCaseConst: true }],
-      errors: [{
-        message: "`const` declaration for non-constant names at top-level scope. Use `let` or rename to UPPER_CASE"
-      }]
-    },
-    {
-      code: "export const AlsoObject = Object;",
-      output: "export let AlsoObject = Object;",
       options: [{ forceUpperCaseConst: true }],
       errors: [{
         message: "`const` declaration for non-constant names at top-level scope. Use `let` or rename to UPPER_CASE"
