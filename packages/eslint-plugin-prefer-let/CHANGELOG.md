@@ -1,5 +1,9 @@
 # eslint-plugin-prefer-let
 
+## \[4.2.2]
+
+- [`96078a2`](https://github.com/thefrontside/javascript/commit/96078a2e1171c94150a366b30c419d38cfd64eb3) Fix ignoring `export const` cases
+
 ## \[4.2.1]
 
 - [`fadad0b`](https://github.com/thefrontside/javascript/commit/fadad0b5cf786b3186d74a35d9933b5e8bea0e34) Ignore `export const` cases
