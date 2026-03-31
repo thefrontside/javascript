@@ -18,7 +18,7 @@
     "@typescript-eslint/eslint-plugin": "^7.7.1",
     "@typescript-eslint/parser": "^7.7.1",
     "@typescript-eslint/utils": "^7.7.1",
-    "eslint": "8.56.0",
+    "eslint": "9.26.0",
     "eslint-plugin-mocha-no-only": "^1.1.1",
     "eslint-plugin-prefer-let": "^3.0.1"
   },
